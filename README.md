@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ⚡ GPU Code Optimizer AI
 
 An AI-powered code analysis tool that uses **NVIDIA Nemotron models** via Ollama to identify GPU optimization opportunities in your code. Built for the NVIDIA GTC 2026 Golden Ticket Developer Contest.
@@ -34,19 +33,46 @@ GPU Code Optimizer AI analyzes Python, CUDA, and C++ code to identify performanc
 
 ### Installation
 
-1. Clone or download this repository
-2. Install dependencies:
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/HUM4NITY/gpu-code-optimizer-ai.git
+   cd gpu-code-optimizer-ai
+   ```
+
+2. Install Python dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
 ### Run the Application
 
+#### Option 1: Simple Setup (Static Frontend)
+
 ```bash
 python app.py
 ```
 
 Then open your browser to: **http://localhost:8000**
+
+#### Option 2: Modern UI (Next.js Frontend - Recommended!)
+
+```bash
+# Terminal 1 - Start Backend
+python app.py
+
+# Terminal 2 - Start Frontend
+cd frontend
+npm install
+npm run dev
+```
+
+Then open your browser to: **http://localhost:3000**
+
+The Next.js version includes:
+- ✨ Polished UI with animations
+- 📋 Built-in code examples
+- 🎨 Modern design with shadcn/ui
+- ⚡ Better performance
 
 ## 📖 Usage
 
@@ -84,10 +110,14 @@ def inefficient_batch_process(data):
 ```
 gpu-code-optimizer/
 ├── app.py                 # FastAPI backend
-├── static/
-│   ├── index.html        # Web interface
-│   ├── style.css         # Styling
-│   └── script.js         # Frontend logic
+├── frontend/              # Next.js modern UI (recommended)
+│   ├── app/              # Next.js pages
+│   ├── components/       # React components
+│   └── lib/              # API client & types
+├── static/               # Simple HTML/CSS/JS UI
+│   ├── index_v2.html    # Alternative web interface
+│   ├── style_v2.css     # Styling
+│   └── script_v2.js     # Frontend logic
 ├── requirements.txt      # Python dependencies
 └── README.md            # Documentation
 ```
@@ -95,7 +125,8 @@ gpu-code-optimizer/
 **Tech Stack:**
 - **Backend**: FastAPI for high-performance async API
 - **AI Engine**: Ollama with NVIDIA Nemotron models
-- **Frontend**: Vanilla JavaScript (no frameworks needed!)
+- **Frontend (Modern)**: Next.js 14, React, TypeScript, Tailwind CSS, shadcn/ui, Framer Motion
+- **Frontend (Simple)**: Vanilla JavaScript (no build step!)
 - **Analysis**: Custom prompt engineering for GPU optimization
 
 ## 🎮 Features
@@ -227,7 +258,3 @@ Built by a developer passionate about GPU computing and AI.
 ---
 
 **⚡ Built with NVIDIA Nemotron | Powered by Ollama | For Developers, By Developers**
-=======
-# gpu-code-optimizer-ai
-An AI-powered code analysis tool that uses **NVIDIA Nemotron models** via Ollama to identify GPU optimization opportunities in your code. Built for the NVIDIA GTC 2026 Golden Ticket Developer Contest.
->>>>>>> 40ec6009aa929f67bdcc092b39dfa298c3ce827a

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPU Code Optimizer AI - NVIDIA Nemotron</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>GPU Code Optimizer AI</h1>
+                <p class="subtitle">Powered by NVIDIA Nemotron via Ollama</p>
+            </div>
+            <div class="header-actions">
+                <select id="modelSelect" class="model-select">
+                    <option value="nemotron">Loading models...</option>
+                </select>
+                <button id="examplesBtn" class="btn-secondary">Load Example</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="editor-section">
+                <div class="section-header">
+                    <h2>Code Input</h2>
+                    <select id="languageSelect" class="language-select">
+                        <option value="python">Python</option>
+                        <option value="cuda">CUDA</option>
+                        <option value="cpp">C++</option>
+                    </select>
+                </div>
+                <textarea id="codeInput" placeholder="Paste your GPU code here for optimization analysis...
+
+Example:
+import torch
+
+def process_batch(data):
+    results = []
+    for item in data:
+        result = model(item.cuda())
+        results.append(result.cpu())
+    return results"></textarea>
+                
+                <div class="button-group">
+                    <button id="analyzeBtn" class="btn-primary">
+                        Analyze & Optimize
+                    </button>
+                    <button id="clearBtn" class="btn-secondary">Clear</button>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="section-header">
+                    <h2>Optimization Analysis</h2>
+                    <div id="statusIndicator" class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Ready</span>
+                    </div>
+                </div>
+                
+                <div id="resultsContainer" class="results-container">
+                    <div class="empty-state">
+                        <div class="empty-icon">⚡</div>
+                        <h3>Ready to Optimize</h3>
+                        <p>Enter your GPU code and click "Analyze & Optimize" to get started.</p>
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <span class="feature-icon">▶</span>
+                                <span>Memory Coalescing</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">⚡</span>
+                                <span>Kernel Fusion</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">■</span>
+                                <span>Shared Memory</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">●</span>
+                                <span>Tensor Cores</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="examplesModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Load Example Code</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div id="examplesList" class="examples-list">
+                    Loading examples...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

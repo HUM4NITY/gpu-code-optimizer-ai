@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ⚡ GPU Code Optimizer AI
 
 An AI-powered code analysis tool that uses **NVIDIA Nemotron models** via Ollama to identify GPU optimization opportunities in your code. Built for the NVIDIA GTC 2026 Golden Ticket Developer Contest.
@@ -226,3 +227,7 @@ Built by a developer passionate about GPU computing and AI.
 ---
 
 **⚡ Built with NVIDIA Nemotron | Powered by Ollama | For Developers, By Developers**
+=======
+# gpu-code-optimizer-ai
+An AI-powered code analysis tool that uses **NVIDIA Nemotron models** via Ollama to identify GPU optimization opportunities in your code. Built for the NVIDIA GTC 2026 Golden Ticket Developer Contest.
+>>>>>>> 40ec6009aa929f67bdcc092b39dfa298c3ce827a
